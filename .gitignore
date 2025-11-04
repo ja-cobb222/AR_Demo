@@ -1,0 +1,17 @@
+# Unity generated
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild*/
+[Ll]ogs/
+[Mm]emoryCaptures/
+UserSettings/
+
+# IDE / generated
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.DotSettings.user

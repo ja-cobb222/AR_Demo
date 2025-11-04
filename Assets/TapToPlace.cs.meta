@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 9a515256f0ed19b65ba3f1bac471e88b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - arRaycastManager: {instanceID: 0}
+  - arCamera: {instanceID: 0}
+  - placeablePrefab: {fileID: 154284839439042889, guid: 8eafcb93b958adbd4aa7984462d25fad, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
