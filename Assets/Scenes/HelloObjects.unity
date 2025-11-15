@@ -314,6 +314,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &327273790
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 327273792}
+  - component: {fileID: 327273791}
+  m_Layer: 0
+  m_Name: InputRouter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &327273791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327273790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c24ea481d3181332ba93aea6003814d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocitySamples: 6
+--- !u!4 &327273792
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 327273790}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.51350546, y: 4.6180706, z: -3.8006353}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623668013
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +372,7 @@ GameObject:
   - component: {fileID: 623668015}
   - component: {fileID: 623668014}
   - component: {fileID: 623668018}
+  - component: {fileID: 623668019}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -369,7 +415,7 @@ MonoBehaviour:
   <trackablesChanged>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  m_PlanePrefab: {fileID: 8272274160025143752, guid: da3bee8392064aa9a98c965c5fd3ceb1, type: 3}
+  m_PlanePrefab: {fileID: 0}
   m_DetectionMode: 3
 --- !u!114 &623668016
 MonoBehaviour:
@@ -420,8 +466,44 @@ MonoBehaviour:
   arCamera: {fileID: 1421594045}
   headProxyPrefab: {fileID: 5311984599761952590, guid: f8bc60e3c9422cb3f8acfdb9efb38896, type: 3}
   carProxyPrefab: {fileID: 6578357022909987039, guid: a264e92ff991764b88a1869167516440, type: 3}
-  scoreThreshold: 0.3
-  cooldownSec: 0.4
+  scoreThreshold: 0.1
+  cooldownSec: 0.5
+  editorGroundMask:
+    serializedVersion: 2
+    m_Bits: 512
+  editorAutoSpawn: 1
+--- !u!114 &623668019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 623668013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05cfbc9d645451cc4b583dab04c6434c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handInputBehaviour: {fileID: 327273791}
+  arCamera: {fileID: 1421594045}
+  grabbableLayers:
+    serializedVersion: 2
+    m_Bits: 1024
+  followStrength: 20
+  pixelToWorld: 0.002
+  forwardBoost: 1
+  upwardBoost: 0
+  maxThrowSpeed: 12
+  rotateSpeed: 120
+  rollSpeed: 120
+  allowScaling: 1
+  scaleRange: {x: 0.5, y: 2}
+  scalePerScroll: 0.08
+  raycaster: {fileID: 0}
+  editorGroundMask:
+    serializedVersion: 2
+    m_Bits: 512
+  useFlatY0WhenNoGround: 1
 --- !u!1 &655346601
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,3 +1327,4 @@ SceneRoots:
   - {fileID: 195850588}
   - {fileID: 264455188}
   - {fileID: 1890966547}
+  - {fileID: 327273792}

@@ -26,7 +26,9 @@ public class TapToPlace : MonoBehaviour
     void Update()
     {
 #if UNITY_EDITOR
-        if (Input.GetMouseButtonDown(0))
+        // OPTION B: require Shift + Left Click in the Editor
+        if (Input.GetMouseButtonDown(0) &&
+            (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift)))
         {
             var ray = arCamera.ScreenPointToRay(Input.mousePosition);
 
@@ -37,7 +39,6 @@ public class TapToPlace : MonoBehaviour
                 // If we clicked a cube, place the new one on top of it
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Placeable"))
                 {
-                    // Top surface = collider bounds max Y
                     var topY = hit.collider.bounds.max.y;
                     p.y = topY + placeableHeight * 0.5f + epsilonLift;
                 }
